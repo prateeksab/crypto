@@ -1,2 +1,2 @@
-# testytoken
-test token with EVM
+# Crypto Projects - Smart contracts & Javascript
+
