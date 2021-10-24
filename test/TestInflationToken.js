@@ -20,7 +20,7 @@ describe("INFLATION  state and transactions", function () {
     firstComer = accounts[1];
   });
 
-  it("Should test 'totalSupply' and other default values.", async function () {
+  it("Should test 'name', 'totalSupply' and other default values.", async function () {
     // 2.
     expect(await testToken.symbol()).to.equal("INF");
     expect(await testToken.name()).to.equal("InflationToken");
@@ -30,7 +30,7 @@ describe("INFLATION  state and transactions", function () {
     expect(totalSupply).to.equal(totalSupplyBigNumberHex);
   });
 
-  it("Should test 'transfer' from the owner to first Transfer.", async function () {
+  it("Should test 'transfer' and updated balances after transfer from the owner to first Wallet.", async function () {
     console.log("Admin adress:", admin.toString());
     console.log("firstcomer adress:", firstComer.toString());
     // From a user to another user

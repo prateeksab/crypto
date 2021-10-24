@@ -29,4 +29,29 @@ npx hardhat --network ropsten run scripts/treasuryListener.js
 6. Transfer 1 WETH from the User Wallet to the Address of the FeeCollector contract. Observe the listener script. Once the transaction is completed you will get a tx hash.
    You would have gotten Fee tokens in your user wallet automatically. Quantity of tokens = 1 * Price of ETH.
 
+## Setting up response to Q2 - Smart Contract treasury
 
+1. Compile the hardhat project. On gitbash / command prompt, run the following command
+   ````
+   npx hardhat compile 
+   ````
+2. Deploy the script locally and on ropsten using the following commands:
+
+
+````
+npx hardhat --network ropsten run scripts/deployInflationToken.js
+npx hardhat --network localhost run scripts/deployInflationToken.js
+````
+(For local deployment, please run 
+````
+npx hardhat node
+```` 
+in another bash/cmd)
+
+3. Verify that the hardhat tests work. Basic tests like verifying token name, totalsupply, transfer and 1% increased balance post transfer are implemented.
+
+''''
+npx hardhat test
+''''
+
+4. <b>Playing with the code on Ropsten</b>: Note the address of the Inflation Token from step 2. Add this to multiple wallets. Send the token to these wallets. Upon every transfer you will note that the balance on every account goes by 1%. An example deployment token has been provided in the formal submission.
