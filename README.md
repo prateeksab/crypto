@@ -50,8 +50,8 @@ in another bash/cmd)
 
 3. Verify that the hardhat tests work. Basic tests like verifying token name, totalsupply, transfer and 1% increased balance post transfer are implemented.
 
-''''
+````
 npx hardhat test
-''''
+````
 
 4. <b>Playing with the code on Ropsten</b>: Note the address of the Inflation Token from step 2. Add this to multiple wallets. Send the token to these wallets. Upon every transfer you will note that the balance on every account goes by 1%. An example deployment token has been provided in the formal submission.
