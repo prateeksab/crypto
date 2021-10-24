@@ -14,8 +14,8 @@ async function main() {
   const Testy = await hre.ethers.getContractFactory("simpleToken");
   const Fee = await hre.ethers.getContractFactory("FeeCollector");
 
-  const testChain = await Testy.deploy({ gasPrice:20e12});
-  const feeChain = await Fee.deploy({ gasPrice:20e12});
+  const testChain = await Testy.deploy({ gasPrice:20e10});
+  const feeChain = await Fee.deploy({ gasPrice:20e10});
 
   await testChain.deployed();
   await feeChain.deployed();

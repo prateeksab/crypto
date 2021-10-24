@@ -660,6 +660,51 @@
       "artifacts": [
         "USDC"
       ]
+    },
+    "C:\\Users\\prate\\OneDrive\\Desktop\\MBA\\Coinfund\\crypto\\contracts\\InflationToken.sol": {
+      "lastModificationDate": 1635035533404,
+      "contentHash": "b630a61beddec1a26fa0a923e3276b9a",
+      "sourceName": "contracts/InflationToken.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "InflationToken"
+      ]
     }
   }
 }

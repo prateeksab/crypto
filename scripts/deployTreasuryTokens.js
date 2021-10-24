@@ -11,25 +11,23 @@ async function main() {
 
   console.log("Deploying contracts with the account:", deployer.address);
 
-  const USDC = await hre.ethers.getContractFactory("USDC");
   const WETH = await hre.ethers.getContractFactory("WETH");
-
+  const USDC = await hre.ethers.getContractFactory("USDC");
   const Fee = await hre.ethers.getContractFactory("FeeCollector");
 
-  const USDCChain = await USDC.deploy({ gasPrice:20e12});
-  const WETHChain = await WETH.deploy({ gasPrice:20e12});
+  const wethChain = await WETH.deploy({ gasPrice:20e10});
+  const USDCChain = await USDC.deploy({ gasPrice:20e10});
+  const feeChain = await Fee.deploy({ gasPrice:20e10});
 
-  const feeChain = await Fee.deploy({ gasPrice:20e12});
-
+  await wethChain.deployed();
   await USDCChain.deployed();
-  await WETHChain.deployed();
   await feeChain.deployed();
+  console.log("WETH Account balance:", (await wethChain.balanceOf(deployer.address)).toString());
   console.log("USDC Account balance:", (await USDCChain.balanceOf(deployer.address)).toString());
-  console.log("WETH Account balance:", (await WETHChain.balanceOf(deployer.address)).toString());
   console.log("FEE Account balance:", (await feeChain.balanceOf(deployer.address)).toString());
 
+  console.log("WETH Chain deployed to:", wethChain.address);
   console.log("USDC Chain deployed to:", USDCChain.address);
-  console.log("WETH Chain deployed to:", WETHChain.address);
   console.log("fee Chain deployed to:", feeChain.address);
 }
 
