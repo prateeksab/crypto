@@ -33,8 +33,10 @@ npx hardhat --network ropsten run scripts/treasuryListener.js
 
 6. Transfer 1 WETH from the User Wallet to the Address of the FeeCollector contract. Observe the listener script. Once the transaction is completed you will get a tx hash.
    You would have gotten Fee tokens in your user wallet automatically. Quantity of tokens = 1 * Price of ETH.
+   
+   - <b> Note: If we replace ERC 20 tokens with ERC 720 tokens, we can have a pool of NFTs that are securitized. </b>
 
-## Setting up response to Q2 - Smart Contract treasury
+## Setting up response to Q2 - Inflationary token incentive system
 
 1. Compile the hardhat project. On gitbash / command prompt, run the following command
    ````
