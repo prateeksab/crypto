@@ -1,9 +1,10 @@
 # Crypto Projects - Smart contracts & Javascript
 
 To run the code, you will need hardhat installed locally. Change the Alchemy/Infura keys to match your keys. You will also be required to install openZeppelin, ethers-hardhat. See hardhatconfig.js for other requirements.
-Questions for ref- 
-Q1 - smart contract treasury that exchanges tokens with its own token - Automatically
-Q2 - ERC20 token that gives 1% incentive to existing holders on every transaction
+
+### Questions for ref- 
+<li> Q1 - smart contract treasury that exchanges tokens with its own token - Automatically </li>
+<li> Q2 - ERC20 token that gives 1% incentive to existing holders on every transaction </li>
 
 ## Setting up response to Q1 - Smart Contract treasury
  
